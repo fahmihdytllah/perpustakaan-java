@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b14ee102-0ab8-4be7-a298-64745e045c2e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nm_petugas" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tb_buku]]>
+	</queryString>
+	<field name="id_buku" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="judul_buku" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pengarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="penerbit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="th_terbit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="19" uuid="e511c313-ac80-4617-86e0-509724bbea7c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN SEKOLAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="555" height="20" uuid="f759eb44-db7f-4a7f-90bd-6ebd0f4f8387"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMK NEGERI MOJOAGUNG]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="78" width="555" height="1" uuid="6a744cf6-0b2a-4a7f-bca9-0d9490f6d7d5"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="-14" y="-20" width="555" height="20" uuid="aaca1b00-b4f1-442c-a366-8f12a29e490f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DATA BUKU]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d100c082-dcc7-4e13-abf0-953e252c34e5"/>
+				<text><![CDATA[ID BUKU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="0" width="80" height="20" uuid="75cdbade-c938-4e6c-8c46-a5fcaaea404f"/>
+				<text><![CDATA[JUDUL BUKU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="2" width="70" height="20" uuid="5f1ece5c-0cdd-4e7f-bebd-0f7db2eea3ce"/>
+				<text><![CDATA[PENGARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="2" width="62" height="20" uuid="74fb80d6-2290-4e08-be06-3ad17405a878"/>
+				<text><![CDATA[PENERBIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="0" width="82" height="20" uuid="deb6cbb3-1b60-40e1-a5e2-54746ee8273c"/>
+				<text><![CDATA[TAHUN TERBIT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="65" height="20" uuid="11f8477c-1353-444e-89ba-4b702740f6db"/>
+				<textFieldExpression><![CDATA[$F{id_buku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="0" width="80" height="20" uuid="c0211806-e84d-4046-8f6e-fbb85265b064"/>
+				<textFieldExpression><![CDATA[$F{judul_buku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="62" height="20" uuid="54f97cd7-2960-4363-aa3b-38480928b934"/>
+				<textFieldExpression><![CDATA[$F{penerbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="0" width="82" height="20" uuid="6f7ef3ef-aa5d-4abc-998a-efd9649806ec"/>
+				<textFieldExpression><![CDATA[$F{th_terbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="0" width="70" height="20" uuid="0114e06d-b120-4966-80aa-d733af4723c5"/>
+				<textFieldExpression><![CDATA[$F{pengarang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="452" y="12" width="45" height="15" uuid="56a5c75b-a97a-48fd-a8f5-2b15edcc8645"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Petugas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="431" y="50" width="100" height="20" uuid="0dafb2b1-bf1c-493b-b5a8-2a10ffb605b4"/>
+				<textFieldExpression><![CDATA[$P{nm_petugas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="395" y="0" width="57" height="20" uuid="16b2b751-6045-4bf6-86e1-bb790bde8823"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Halaman ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="0" width="21" height="20" uuid="532629f7-847d-4cf9-86f1-1e5c89a1626a"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="473" y="0" width="25" height="20" uuid="4aef4c53-02b9-41dd-99c6-98e5d12fd595"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[dari]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="518" y="0" width="23" height="20" uuid="d9d5686a-4a66-45aa-b95c-870c6c2e6e37"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
